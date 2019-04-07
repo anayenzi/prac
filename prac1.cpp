@@ -14,12 +14,12 @@ void print_array(int *a, int n)
 	}
 }
 
-int make_aray_with_div(int *a, int n)
+int * make_aray_with_div(int *a, int n)
 {
 	//algorithm
 }
 
-int make_aray_without_div(int *a, int n)
+int * make_aray_without_div(int *a, int n)
 {
 	//algorithm
 }
@@ -45,3 +45,8 @@ int main(int argc, char *argv[])
 
 	return 0;
 }
+
+
+//give you my license
+//show you how to compile
+//write your git alias
