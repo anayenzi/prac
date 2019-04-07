@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 void print_array(int *a, int n)
 {
 	for(int i = 0; i < n; i++)
@@ -8,18 +11,26 @@ void print_array(int *a, int n)
 		printf("%d ", a[i]);
 
 		if(i == n - 1)
-			printf("]");
+			printf("]\n");
 	}
 }
 
 int * make_aray_with_div(int *a, int n)
-{
+{	
+	int *b = new int[n];
+
 	//algorithm
+
+	return b;
 }
 
 int * make_aray_without_div(int *a, int n)
 {
+	int *b = new int[n];
+
 	//algorithm
+
+	return b;
 }
 
 int main(int argc, char *argv[])
@@ -27,8 +38,6 @@ int main(int argc, char *argv[])
 	int n = argc - 1;
 
 	int *a = new int[n];
-
-	using std::atoi;
 
 	for(int i = 0; i < n; i++)
 		a[i] = atoi(argv[i + 1]);
@@ -43,8 +52,3 @@ int main(int argc, char *argv[])
 
 	return 0;
 }
-
-
-//give you my license
-//show you how to compile
-//write your git alias
