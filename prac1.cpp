@@ -24,6 +24,7 @@ int make_aray_without_div(int *a, int n)
 	//algorithm
 }
 
+
 int main(int argc, char *argv[])
 {
 	int n = argc - 1;
