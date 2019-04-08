@@ -19,16 +19,35 @@ int * make_aray_with_div(int *a, int n)
 {	
 	int *b = new int[n];
 
-	//algorithm
+	int product = 1;
 
+	for(int i = 0; i < n; i++)
+		product = product * a[i];
+
+	for(int i = 0; i < n; i++)
+		b[i] = product / a[i];
+ 
 	return b;
 }
 
 int * make_aray_without_div(int *a, int n)
 {
+	int *prefix = new int[n];
+	int *suffix = new int[n];
 	int *b = new int[n];
 
-	//algorithm
+	prefix[0] = 1;
+
+	for(int i = 0; i < n-1; i++)
+		prefix[i+1] = prefix[i] * a[i];
+
+	suffix[n-1] = 1;
+
+	for(int i = n-1; i > -1; i--)
+		suffix[i-1] = suffix[i] * a[i];
+
+	for(int i = 0; i < n; i++)
+		b[i] = prefix[i] * suffix[i];
 
 	return b;
 }
